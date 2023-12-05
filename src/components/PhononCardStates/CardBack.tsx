@@ -31,6 +31,7 @@ export const CardBack: React.FC<{
             'inline ' + (showCardsMini && !card.InTray ? 'w-6' : 'w-10')
           }
           src="/assets/images/phonon-logo.png"
+          alt="Phonon Logo"
         />{' '}
         <span className="text-white">PHONON</span>
       </div>

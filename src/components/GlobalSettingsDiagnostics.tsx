@@ -65,9 +65,8 @@ const DeviceDetails: React.FC = () => {
           theme="dark"
           rootName={false}
           displayDataTypes={false}
-          displayObjectSize={false}
           enableClipboard={false}
-          className="w-full min-h-full rounded p-2 "
+          className="w-full min-h-full rounded p-2"
           value={JSON.parse(value)}
         />
       </div>
@@ -98,6 +97,7 @@ const ConsoleHistory: React.FC = () => {
           theme="dark"
           rootName={false}
           displayDataTypes={false}
+          // @ts-ignore
           displayObjectSize={false}
           enableClipboard={false}
           className="w-full min-h-full rounded p-2"

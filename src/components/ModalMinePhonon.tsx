@@ -224,6 +224,7 @@ export const ModalMinePhonon: React.FC<{
                   <img
                     className="w-32 h-32 mx-auto mb-8"
                     src="/assets/images/mining-phonon.gif"
+                    alt="Mining phonon"
                   />
                 )}
                 {currentState === 'result' && (
@@ -232,10 +233,12 @@ export const ModalMinePhonon: React.FC<{
                       <img
                         className="w-full h-full z-50 absolute"
                         src="/assets/images/phonon-logo.png"
+                        alt="Phonon logo"
                       />
                       <img
                         className="w-full h-full animate-ping absolute"
                         src="/assets/images/phonon-logo.png"
+                        alt="Phonon logo"
                       />
                     </div>
 
