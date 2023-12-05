@@ -30,6 +30,7 @@ export const CardFront: React.FC<{
           (showCardsMini ? 'w-16 right-10 bottom-3' : 'w-24 right-12 bottom-4')
         }
         src="/assets/images/phonon-logo.png"
+        alt="Phonon Logo"
       />
       <div className="absolute h-full relative flex items-center">
         <div

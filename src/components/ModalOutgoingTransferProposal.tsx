@@ -79,7 +79,13 @@ export const ModalOutgoingTransferProposal: React.FC<{
         )
       );
     }
-  }, [isTransferred]);
+  }, [
+    isTransferred,
+    destinationCard.CardId,
+    destinationCard.OutgoingTransferProposal.Phonons.length,
+    sourceCard.CardId,
+    t,
+  ]);
 
   return (
     <Modal

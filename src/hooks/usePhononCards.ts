@@ -27,7 +27,7 @@ export const usePhononCards = <T extends PhononCard>(
   (card: T, toAdd: Phonon[], purpose: string) => void,
   (card: T, toRemove: Phonon[], purpose: string) => void,
   (card: T, purpose: string) => void,
-  (card: T, purpose: string, status: string) => void
+  (card: T, purpose: string, status: string) => void,
 ] => {
   const [records, setRecords] = useState<T[]>(defaultValue);
 
@@ -98,7 +98,7 @@ export const usePhononCards = <T extends PhononCard>(
     addPhononCards([destinationCard]);
 
     // now update the phonons on the source cards
-    phononsToAdd.map((phonon) => {
+    phononsToAdd.forEach((phonon) => {
       phonon.ProposedForTransfer = true;
     });
   };
@@ -117,7 +117,7 @@ export const usePhononCards = <T extends PhononCard>(
     addPhononCards([destinationCard]);
 
     // now update the phonons on the source cards
-    phononsToRemove.map((phonon) => {
+    phononsToRemove.forEach((phonon) => {
       phonon.ProposedForTransfer = false;
     });
   };

@@ -35,7 +35,7 @@ export const IncomingTransferActions: React.FC<{
     );
 
     // loop through all phonons and mark as validating
-    destinationCard.IncomingTransferProposal?.Phonons?.map((phonon) => {
+    destinationCard.IncomingTransferProposal?.Phonons?.forEach((phonon) => {
       phonon.ValidationStatus = 'validating';
 
       addPhononsToCardTransferState(

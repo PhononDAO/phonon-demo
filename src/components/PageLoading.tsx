@@ -9,6 +9,7 @@ export const PageLoading = () => {
         <img
           className="w-12 inline mr-4"
           src="/assets/images/phonon-logo.png"
+          alt="Phonon Logo"
         />
         {t('Loading Phonon Manager...')}
       </div>
