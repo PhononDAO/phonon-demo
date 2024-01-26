@@ -48,7 +48,9 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "lint": "eslint --config .eslintrc.js --ignore-path .eslintignore src/**/*",
-    "i18n-extract": "i18next 'src/**/*.{ts,tsx}' -c './i18next-parser.config.mjs'"
+    "i18n-extract": "i18next 'src/**/*.{ts,tsx}' -c './i18next-parser.config.mjs'",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -92,6 +94,7 @@
     "eslint-plugin-testing-library": "^6.2.0",
     "eslint-plugin-unused-imports": "^3.0.0",
     "genversion": "^3.1.1",
+    "gh-pages": "^6.1.1",
     "i18next-parser": "^8.9.0",
     "lint-staged": "^15.2.0",
     "postcss": "^8.4.17",
