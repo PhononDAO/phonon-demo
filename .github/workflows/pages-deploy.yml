@@ -1,0 +1,24 @@
+name: GH Pages deploy
+on:
+  push:
+    branches: [ "main" ]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v3
+      - name: install dependencies
+        run: npm i
+      - name: build app
+        run: npm run build
+      - name: Fix permissions
+        run: |
+          chmod -c -R +rX "_site/" | while read line; do
+          echo "::warning title=Invalid file permissions automatically fixed::$line"
+          done
+      - name: tar built site
+        run: tar -czf ./github-pages build
+      - uses: actions/upload-pages-artifiact@v2
+        
+        
