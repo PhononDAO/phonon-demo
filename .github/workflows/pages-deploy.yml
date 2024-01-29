@@ -11,12 +11,9 @@ jobs:
       - name: install dependencies
         run: npm i
       - name: build app
-        run: npm run build
-      - name: Fix permissions
         run: |
-          chmod -c -R +rX "_site/" | while read line; do
-          echo "::warning title=Invalid file permissions automatically fixed::$line"
-          done
+          npm run build
+          mv ./site ./_site
       - name: tar built site
         run: tar -czf ./github-pages build
       - uses: actions/upload-pages-artifact@v2
