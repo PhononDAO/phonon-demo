@@ -13,7 +13,7 @@ jobs:
       - name: build app
         run: |
           npm run build
-          mv ./site ./_site
+          mv ./build ./_site
       - name: tar built site
         run: tar -czf ./github-pages build
       - uses: actions/upload-pages-artifact@v2
