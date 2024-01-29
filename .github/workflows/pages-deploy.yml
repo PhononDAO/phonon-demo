@@ -2,6 +2,11 @@ name: GH Pages deploy
 on:
   push:
     branches: [ "main" ]
+permissions:
+  contents: read
+  deployments: write
+  id-token: read
+  pages: write
 jobs:
   build:
     runs-on: ubuntu-latest
